@@ -3,7 +3,6 @@ const Part = require('../models/Part');
 
 router.get('/', async (req, res) => {
   const parts = await Part.getAllParts();
-
   res.render('parts', { title: 'Posts', parts, isPosts: true });
 });
 
