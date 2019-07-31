@@ -1,0 +1,17 @@
+<h3>Parts {{parts.length}}</h3>
+
+{{#if parts.length}}
+{{#each parts}}
+<div class="card grey lighten-5">
+  <div class="card-content black-text">
+    <span class="card-title">{{name}} : {{title}}</span>
+    {{!-- <p>{{name}}</p> --}}
+  </div>
+  <div class="card-action">
+    <a href="/part/{{id}}">Read part</a>    
+  </div>
+</div>
+{{/each}}
+{{else}}
+<p>No parts yet</p>
+{{/if}}
