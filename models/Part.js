@@ -20,8 +20,6 @@ class Part {
     static async getPartById(id) {
         const parts = await this.getAllParts();
 
-        console.log(parts);  
-
         return parts.find(part => part.id === +id);
     }
 }
