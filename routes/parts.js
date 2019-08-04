@@ -9,8 +9,9 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-    const part = await Part.getPartById(req.params.id);
-    // res.send(part);
+    const partId = req.params.id;
+    const part = await Part.getPartById(partId);
+    console.log(part);
     res.render('part', { title: 'Parts', part });
 });
 
