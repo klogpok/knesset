@@ -19,8 +19,11 @@ class Part {
 
     static async getPartById(id) {
         const parts = await this.getAllParts();
-
-        return parts.find(part => part.id === +id);
+        const part = parts.find(part => part.id === +id);
+        part.chapters.forEach(c => {
+            c.partId = id;
+        })
+        return part;
     }
 }
 
